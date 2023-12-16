@@ -1,0 +1,42 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Dastlabki hadni kiriting (A): ");
+        int A = scanner.nextInt();
+
+        System.out.print("Maxrajni kiriting (D): ");
+        int D = scanner.nextInt();
+
+        System.out.print("Massiv uzunligini kiriting (n): ");
+        int n = scanner.nextInt();
+
+        
+        int[] array = generateGeometricProgression(A, D, n);
+        
+        System.out.print("Hosil qilingan geometrik progressiya: ");
+        
+        printArray(array);
+    }
+
+    
+    public static int[] generateGeometricProgression(int A, int D, int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = A * (int) Math.pow(D, i);
+        }
+        return array;
+    }
+
+    
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
