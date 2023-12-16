@@ -1,0 +1,33 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in) ;
+        int A = scanner.nextInt(); 
+        int D = scanner.nextInt(); 
+        int n = scanner.nextInt(); 
+
+        
+        int[] array = generateArithmeticProgression(A, D, n);
+
+        
+        printArray(array);
+    }
+
+    
+    public static int[] generateArithmeticProgression(int A, int D, int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = A + i * D;
+        }
+        return array;
+    }
+    
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
