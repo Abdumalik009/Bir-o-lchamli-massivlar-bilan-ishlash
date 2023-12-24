@@ -1,0 +1,34 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array29 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+        
+        int[] A = new int[n];
+        
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+
+        
+        int maxToq = Integer.MIN_VALUE;
+
+        for (int i = 1; i < n; i += 2) {
+            if (A[i] > maxToq) {
+                maxToq = A[i];
+            }
+        }
+
+        
+        System.out.println("Toq indeksli elementlari orasidan eng katta element: " + maxToq);
+    }
+}
