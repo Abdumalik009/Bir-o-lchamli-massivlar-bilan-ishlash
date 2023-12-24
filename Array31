@@ -1,0 +1,51 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array31 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+
+        int[] massiv = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Element #" + (i + 1) + "ni kiriting: ");
+            massiv[i] = scanner.nextInt();
+        }
+
+
+        int maxIndex = -1;
+        int maxCount = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            if (massiv[i] < massiv[i + 1]) {
+                int count = 2;
+                int j = i + 1;
+                while (j < n - 1 && massiv[j] < massiv[j + 1]) {
+                    count++;
+                    j++;
+                }
+
+                if (count > maxCount) {
+                    maxCount = count;
+                    maxIndex = i;
+                }
+            }
+        }
+
+
+        if (maxIndex == -1) {
+            System.out.println("Chap qo'shnisidan katta bo'lgan element topilmadi");
+        } else {
+            System.out.println("Chap qo'shnisidan katta bo'lgan elementlar indeksi: " + maxIndex);
+            System.out.println("Ularning soni: " + maxCount);
+        }
+
+        
+        
+    }
+}
