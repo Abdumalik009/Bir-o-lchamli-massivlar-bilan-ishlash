@@ -1,0 +1,44 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array21 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+        
+        int[] A = new int[n];
+
+        
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+
+        
+        System.out.print("K indeksini kiriting (0 <= K <= N-1): ");
+        int k = scanner.nextInt();
+
+        System.out.print("L indeksini kiriting (K <= L <= N-1): ");
+        int l = scanner.nextInt();
+
+        
+        double ortaArifmetik = 0;
+        int summa = 0;
+
+        for (int i = k; i <= l; i++) {
+            summa += A[i];
+        }
+
+        ortaArifmetik = (double) summa / (l - k + 1);
+
+        
+        System.out.println("K dan L gacha bo'lgan elementlarining o'rta arifmetigi: " + ortaArifmetik);
+    }
+}
+
