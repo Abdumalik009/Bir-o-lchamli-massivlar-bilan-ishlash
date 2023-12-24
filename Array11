@@ -1,0 +1,29 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array11 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int len = scanner.nextInt();
+        
+        int[] massiv = new int[len];
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < len; i++) {
+            massiv[i] = scanner.nextInt();
+        }
+
+
+        System.out.print("K ni kiriting (1 <= K < n): ");
+        int k = scanner.nextInt();
+        
+        System.out.print("Indeksi K ga karralilar: ");
+        for (int i = k - 1; i < len; i += k) {
+            System.out.print(massiv[i] + " ");
+        }
+    }
+}
+
+
