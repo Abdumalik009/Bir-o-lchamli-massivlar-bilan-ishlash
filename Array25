@@ -1,0 +1,38 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array25 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+        
+        int[] A = new int[n];
+        
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+        
+        boolean geometrikProgressiya = true;
+        double ratio = (double) A[1] / A[0];
+
+        for (int i = 2; i < n; i++) {
+            if ((double) A[i] / A[i - 1] != ratio) {
+                geometrikProgressiya = false;
+                break;
+            }
+        }
+        
+        if (geometrikProgressiya) {
+            double maxRatio = Math.pow(ratio, n - 1);
+            System.out.println("Massiv geometrik progressiya. Maxraj: " + maxRatio);
+        } else {
+            System.out.println("Massiv geometrik progressiya emas.");
+        }
+    }
+}
+
