@@ -1,0 +1,40 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array33 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+        
+        int[] massiv = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Element #" + (i + 1) + "ni kiriting: ");
+            massiv[i] = scanner.nextInt();
+        }
+
+        
+        int lokalMaksimumIndeks = -1;
+
+        for (int i = n - 2; i > 0; i--) {
+            if (massiv[i] > massiv[i - 1] && massiv[i] > massiv[i + 1]) {
+                lokalMaksimumIndeks = i;
+                break;
+            }
+        }
+
+        
+        if (lokalMaksimumIndeks == -1) {
+            System.out.println("Massivda oxirgi lokal maksimum topilmadi");
+        } else {
+            System.out.println("Oxirgi lokal maksimum element indeksi: " + lokalMaksimumIndeks);
+        }
+
+        
+        
+    }
+}
