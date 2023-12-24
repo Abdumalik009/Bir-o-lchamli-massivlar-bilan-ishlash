@@ -1,0 +1,32 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array17 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+        int[] A = new int[n];
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+
+        System.out.println("Natija:");
+        for (int i = 0; i < n / 2; i++) {
+            System.out.print(A[i] + ", " + A[i + 1] + ", " + A[n - 1 - i] + ", " + A[n - 2 - i] + ", ");
+        }
+
+        if (n % 2 != 0) {
+            System.out.println(A[n / 2]);
+        } else {
+            System.out.println();
+        }
+    }
+}
+
