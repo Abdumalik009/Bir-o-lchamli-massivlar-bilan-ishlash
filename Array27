@@ -1,0 +1,39 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array27 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+        
+        int[] A = new int[n];
+
+        
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+
+        
+        int kelishmayanIndeks = -1;
+
+        for (int i = 0; i < n - 1; i++) {
+            if ((A[i] % 2 == 0 && A[i + 1] % 2 == 1) || (A[i] % 2 == 1 && A[i + 1] % 2 == 0)) {
+                kelishmayanIndeks = i;
+                break;
+            }
+        }
+
+        
+        if (kelishmayanIndeks == -1) {
+            System.out.println("Massivda juft va toq elementlar ketma-ket keladi.");
+        } else {
+            System.out.println("Massivda juft va toq elementlar ketma-ket kelmaydi. Kelishmayan birinchi element indeksi: " + kelishmayanIndeks);
+        }
+    }
+}
