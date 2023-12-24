@@ -1,0 +1,26 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array13 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Massiv uzunligini kiriting (toq son): ");
+        int uzunlik = scanner.nextInt();
+
+
+        int[] massiv = new int[uzunlik];
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < uzunlik; i++) {
+            massiv[i] = scanner.nextInt();
+        }
+
+
+        System.out.print("Indeksi toq sonli elementlar: ");
+        for (int i = uzunlik - 1; i >= 0; i -= 2) {
+            System.out.print(massiv[i] + " ");
+        }
+    }
+}
+
