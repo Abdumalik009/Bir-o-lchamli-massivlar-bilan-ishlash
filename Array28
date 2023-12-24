@@ -1,0 +1,35 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array28 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Massiv uzunligini kiriting: ");
+        int n = scanner.nextInt();
+
+        
+        int[] A = new int[n];
+
+        
+        System.out.println("Massiv elementlarini kiriting:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+
+        
+        int minJuft = Integer.MAX_VALUE;
+
+        for (int i = 0; i < n; i += 2) {
+            if (A[i] < minJuft) {
+                minJuft = A[i];
+            }
+        }
+
+        
+        System.out.println("Juft indeksli elementlari orasidan eng kichik element: " + minJuft);
+    }
+}
