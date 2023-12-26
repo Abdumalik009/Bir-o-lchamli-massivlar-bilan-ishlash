@@ -1,25 +1,93 @@
+package Array;
+
 import java.util.Scanner;
 
-public class ToqlarTartibida {
+public class Array8 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Massiv uzunligini kiriting: ");
-        int uzunlik = scanner.nextInt();
+        System.out.print("Massivni kiriting: ");
+        int n = scanner.nextInt();
 
-        int[] massiv = new int[uzunlik];
-        System.out.println("Massiv elementlarini kiriting:");
-        for (int i = 0; i < uzunlik; i++) {
-            massiv[i] = scanner.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Massiv uzini kiriting: ");
+            array[i] = scanner.nextInt();
         }
 
 
+        toq(array);
+
+    }
+    public static void toq(int[] array) {
         System.out.print("Massiv elementlari orasidan toqlar: ");
-        for (int i = 1; i < uzunlik - 1; i += 2) {
-            System.out.print(massiv[i] + " ");
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 != 0) {
+                System.out.print(array[i] + " ");
+            }
         }
-
-        int toqlarSoni = (uzunlik + 1) / 2;
-        System.out.println("\nToqlar soni = " + toqlarSoni);
     }
 }
+
+package Array;
+
+import java.util.Scanner;
+
+public class Array8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Massivni kiriting: ");
+        int n = scanner.nextInt();
+
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Massiv uzini kiriting: ");
+            array[i] = scanner.nextInt();
+        }
+
+
+        toq(array);
+
+    }
+    public static void toq(int[] array) {
+        System.out.print("Massiv elementlari orasidan toqlar: ");
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 != 0) {
+                System.out.print(array[i] + " ");
+            }
+        }
+    }
+}
+
+package Array;
+
+import java.util.Scanner;
+
+public class Array8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Massivni kiriting: ");
+        int n = scanner.nextInt();
+
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Massiv uzini kiriting: ");
+            array[i] = scanner.nextInt();
+        }
+
+
+        toq(array);
+
+    }
+    public static void toq(int[] array) {
+        System.out.print("Massiv elementlari orasidan toqlar: ");
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 != 0) {
+                System.out.print(array[i] + " ");
+            }
+        }
+    }
+}
+
