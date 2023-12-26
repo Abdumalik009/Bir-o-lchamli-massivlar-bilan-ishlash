@@ -7,16 +7,16 @@ public class Array12 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Massiv uzunligini kiriting (juft son): ");
-        int uzunlik = scanner.nextInt();
+        int len = scanner.nextInt();
 
-        int[] massiv = new int[uzunlik];
+        int[] massiv = new int[len];
         System.out.println("Massiv elementlarini kiriting:");
-        for (int i = 0; i < uzunlik; i++) {
+        for (int i = 0; i < len; i++) {
             massiv[i] = scanner.nextInt();
         }
 
         System.out.print("Indeksi juft sonli elementlar: ");
-        for (int i = 0; i < uzunlik; i += 2) {
+        for (int i = 0; i < len; i += 2) {
             System.out.print(massiv[i] + " ");
         }
     }
