@@ -16,7 +16,7 @@ public class Array11 {
         }
 
 
-        System.out.print("K ni kiriting (1 <= K < n): ");
+        System.out.print("K ni kiriting : ");
         int k = scanner.nextInt();
         
         System.out.print("Indeksi K ga karralilar: ");
