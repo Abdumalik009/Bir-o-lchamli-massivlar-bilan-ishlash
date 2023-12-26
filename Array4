@@ -6,26 +6,26 @@ public class Array4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        
-        System.out.print("Dastlabki hadni kiriting (A): ");
+
+        System.out.print("Dastlabki hadni kiriting: ");
         int A = scanner.nextInt();
 
-        System.out.print("Maxrajni kiriting (D): ");
+        System.out.print("Maxrajni kiriting: ");
         int D = scanner.nextInt();
 
-        System.out.print("Massiv uzunligini kiriting (n): ");
+        System.out.print("Massiv uzunligini kiriting: ");
         int n = scanner.nextInt();
 
-        
-        int[] array = generateGeometricProgression(A, D, n);
-        
+
+        int[] array = genera(A, D, n);
+
         System.out.print("Hosil qilingan geometrik progressiya: ");
-        
-        printArray(array);
+
+        arr(array);
     }
 
-    
-    public static int[] generateGeometricProgression(int A, int D, int n) {
+
+    public static int[] genera(int A, int D, int n) {
         int[] array = new int[n];
         for (int i = 0; i < n; i++) {
             array[i] = A * (int) Math.pow(D, i);
@@ -33,8 +33,8 @@ public class Array4 {
         return array;
     }
 
-    
-    public static void printArray(int[] array) {
+
+    public static void arr(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
